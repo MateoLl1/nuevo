@@ -25,6 +25,10 @@ header{
     pointer-events: none;
 }
 
+#btnAmbur{
+    color: #1c1c1c;
+    font-size: 30px;
+}
 .nav{
     z-index: 1;
 }
@@ -53,14 +57,16 @@ header{
 }
 
 @media (max-width:900px){
-
+    #equis{
+        font-size: 25px;
+    }
     .abrir-menu{
         display: block;
         
     }
     .cerrar-menu{
         display: block;
-        color: aliceblue;
+        color: #1c1c1c;
     }
     .nav{
         opacity: 0;
@@ -111,9 +117,20 @@ header{
 
 
 .image-slider{
+    aspect-ratio: 47 / 20;
     width: 100%;
-    height: 500px;
-    background-color: #1c1c1c;
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+}
+.image-slider img{
+    width: 100%;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    pointer-events: none;
+    scroll-snap-align: center;
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
